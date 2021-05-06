@@ -1,0 +1,1594 @@
+/* CZCIONKI */
+@font-face {
+    font-family: Tungsten-Medium;
+    src: url(../fonts/Tungsten-Medium.ttf);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: Tungsten-Semibold;
+    src: url(../fonts/Tungsten-Semibold.ttf);
+}
+
+@font-face {
+    font-family: SourceSansPro-Regular;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: SourceSansPro-Semibold;
+    src: url(../fonts/SourceSansPro-SemiBold.ttf);
+}
+
+/************/
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+h1 {
+    color: #01013f;
+    font-family: "Tungsten-Medium";
+    font-size: 6.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+    line-height: 78px;
+}
+
+h2 {
+    color: #01013f;
+    font-family: "Tungsten-Medium";
+    font-size: 4.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.07px;
+    line-height: 50px;
+}
+
+a {
+    color: #000;
+}
+
+.transitionBetweenSectionBottom {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.transitionBetweenSectionBottom div {
+    height: 30px;
+}
+
+.transitionBetweenSectionBottom div:first-of-type {
+    background-color: #f3f3f3;
+    flex-grow: 1.5;
+}
+
+.previousFooter div {
+    min-width: 50%;
+}
+
+.transitionBetweenSectionBottom div:last-of-type {
+    flex-grow: 2;
+}
+
+.transitionBetweenSectionTop {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.transitionBetweenSectionTop div {
+    height: 30px;
+}
+
+.transitionBetweenSectionTop div:first-of-type {
+    flex-grow: 1.5;
+}
+
+.transitionBetweenSectionTop div:last-of-type {
+    flex-grow: 2;
+    background-color: #f3f3f3;
+}
+
+/* nav */
+
+.nav {
+    max-width: 1436px;
+    text-align: center;
+    background-color: #fff;
+    /*box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);*/
+    /*position: fixed;*/
+    /*width: 100%;*/
+    margin: auto;
+    padding-top: 30px;
+    position: relative;
+    z-index: 3;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.nav li a {
+    display: block;
+    padding: 5px 20px;
+    font-family: "Tungsten-Medium";
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: right;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    padding-left: 115px;
+}
+
+.nav li a:hover,
+.nav .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.nav .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    padding-left: 115px;
+}
+
+/* menu */
+
+.nav .menu {
+    clear: both;
+    max-height: 0;
+    -webkit-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 5px;
+    position: relative;
+    -webkit-transition: background 0.2s ease-out;
+    -o-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
+    width: 35px;
+}
+
+.nav .menu-icon .navicon:before,
+.nav .menu-icon .navicon:after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    width: 100%;
+}
+
+.nav .menu-icon .navicon:before {
+    top: 10px;
+}
+
+.nav .menu-icon .navicon:after {
+    top: -10px;
+}
+
+/* menu btn */
+
+.nav .menu-btn {
+    display: none;
+}
+
+.nav .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 480em) {
+    .nav li {
+        float: left;
+    }
+
+    .nav li a {
+        padding: 20px 30px;
+    }
+
+    .nav .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .nav .menu-icon {
+        display: none;
+    }
+}
+
+/* header */
+
+.header {
+    max-width: 1436px;
+    margin: auto;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.header .header-img img {
+    width: 100%;
+}
+
+.header .header-img {
+    max-width: 1400px;
+    /*box-shadow: 36px 36px 0px 0px rgba(0,0,64,1);*/
+    position: inherit;
+    z-index: 1;
+}
+
+.header .mobilny-fizjo {
+    position: absolute;
+    top: 25px;
+    left: 115px;
+    font-size: 11rem;
+    max-width: 408px;
+    text-transform: uppercase;
+    font-family: "Tungsten-Medium";
+    line-height: 113px;
+    color: #020240;
+    z-index: 2;
+}
+
+.header .mobilny-fizjo img {
+    display: block;
+}
+
+.header .border-img {
+    position: absolute;
+    bottom: -36px;
+    right: 0;
+}
+
+/* mobilne usługi fizjo */
+
+.mobilne-uslugi {
+    max-width: 1400px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 78px;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+.mobilne-uslugi p.mobilne-uslugi-text {
+    max-width: 1082px;
+    margin: auto;
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 2.2rem;
+    letter-spacing: 0;
+    line-height: 33px;
+    text-align: center;
+}
+
+.mobilne-uslugi button {
+    width: 265px;
+    height: 55px;
+    margin: auto;
+    margin-top: 33px;
+    background-color: #01013f;
+    color: #ffffff;
+    font-family: "Tungsten-Medium";
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    -webkit-box-shadow: 8px 8px 0px 0px rgba(45, 255, 227, 1);
+    box-shadow: 8px 8px 0px 0px rgba(45, 255, 227, 1);
+}
+
+.mobilne-uslugi img {
+    transform: translateY(50%);
+    height: 100px;
+}
+
+.ofertMobileVersion {
+    display: none;
+}
+
+.uslugi {
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 66px;
+    margin-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.uslugi div {
+    margin: 60px auto !important;
+}
+
+.uslugi .konsultacja-fizjoterapeutyczna {
+    max-width: 984px;
+    margin: auto;
+}
+
+.uslugi .konsultacja-fizjoterapeutyczna img {
+    float: left;
+}
+
+.uslugi .konsultacja-fizjoterapeutyczna h2 {
+    float: left;
+    margin-left: 57px;
+    width: 615px;
+}
+
+.uslugi .konsultacja-fizjoterapeutyczna p.konsultacja-fizjoterapeutyczna-text {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-left: 320px;
+}
+
+.uslugi .konsultacja-fizjoterapeutyczna p.cennik {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-left: 320px;
+}
+
+.uslugi .terapia-miesniowo {
+    max-width: 1075px;
+    margin: auto;
+    margin-top: 56px;
+}
+
+.uslugi .terapia-miesniowo img {
+    float: right;
+}
+
+.uslugi .terapia-miesniowo h2 {
+    /*float: right;*/
+    margin-right: 49px;
+    width: 895px;
+}
+
+.uslugi .terapia-miesniowo p.terapia-miesniowo-text {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-right: 320px;
+    text-align: right;
+}
+
+.uslugi .terapia-miesniowo p.cennik {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    text-align: right;
+    margin-right: 320px;
+}
+
+.uslugi .masaz-tkanek {
+    max-width: 984px;
+    margin: auto;
+    margin-top: 46px;
+}
+
+.uslugi .masaz-tkanek img {
+    float: left;
+}
+
+.uslugi .masaz-tkanek h2 {
+    float: left;
+    margin-left: 57px;
+    width: 625px;
+}
+
+.uslugi .masaz-tkanek p.masaz-tkanek-text {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-left: 320px;
+}
+
+.uslugi .masaz-tkanek p.cennik {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-left: 320px;
+}
+
+.uslugi .drenaz-limfatyczny {
+    max-width: 1075px;
+    margin: auto;
+    margin-top: 71px;
+}
+
+.uslugi .drenaz-limfatyczny img {
+    float: right;
+}
+
+.uslugi .drenaz-limfatyczny h2 {
+    /*float: right;*/
+    padding-right: 140px;
+    margin-right: 49px;
+    width: 895px;
+    text-align: right;
+}
+
+.uslugi .drenaz-limfatyczny p.drenaz-limfatyczny-text {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-right: 320px;
+    text-align: right;
+}
+
+.uslugi .drenaz-limfatyczny p.cennik {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    text-align: right;
+    margin-right: 320px;
+}
+
+.uslugi .masaz-klasyczny {
+    max-width: 984px;
+    margin: auto;
+    margin-top: 1px;
+}
+
+.uslugi .masaz-klasyczny img {
+    float: left;
+}
+
+.uslugi .masaz-klasyczny h2 {
+    float: left;
+    margin-left: 53px;
+    width: 600px;
+}
+
+.uslugi .masaz-klasyczny p.masaz-klasyczny-text {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-left: 316px;
+}
+
+.uslugi .masaz-klasyczny p.cennik {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-left: 320px;
+}
+
+.uslugi .kinesiotaping {
+    max-width: 1075px;
+    margin: auto;
+    margin-top: 6px;
+}
+
+.uslugi .kinesiotaping img {
+    float: right;
+}
+
+.uslugi .kinesiotaping h2 {
+    /*float: right;*/
+    padding-right: 140px;
+    margin-right: 49px;
+    width: 895px;
+    text-align: right;
+}
+
+.uslugi .kinesiotaping p.kinesiotaping-text {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-right: 320px;
+    text-align: right;
+}
+
+.uslugi .kinesiotaping p.cennik {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    text-align: right;
+    margin-right: 320px;
+}
+
+.uslugi .masaz-banka {
+    max-width: 984px;
+    margin: auto;
+    margin-top: 64px;
+}
+
+.uslugi .masaz-banka img {
+    float: left;
+}
+
+.uslugi .masaz-banka h2 {
+    float: left;
+    margin-left: 53px;
+    width: 620px;
+}
+
+.uslugi .masaz-banka p.masaz-banka-text {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-left: 316px;
+}
+
+.uslugi .masaz-banka p.cennik {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin-left: 320px;
+}
+
+.uslugi button {
+    width: 265px;
+    height: 55px;
+    margin: auto;
+    margin-top: 61px;
+    background-color: #01013f;
+    color: #ffffff;
+    font-family: "Tungsten-Medium";
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    -webkit-box-shadow: 8px 8px 0px 0px rgba(45, 255, 227, 1);
+    box-shadow: 8px 8px 0px 0px rgba(45, 255, 227, 1);
+}
+
+.uslugi p.cennik-gwiazdka {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-weight: normal;
+    font-size: 1.4rem;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.zespol {
+    max-width: 1400px;
+    margin: auto;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+.zespol .arrow {
+    transform: translateY(-75%);
+    margin: 0 auto;
+}
+
+.zespol #myCarousel2 {
+    padding: 50px 0;
+    text-align: left;
+    min-height: 887px;
+}
+
+.zespol .carousel-control .left {
+    background-image: transparent;
+}
+
+.zespol .part-left {
+    margin-left: 235px;
+    margin-right: 66px;
+    float: left;
+}
+
+.zespol .part-left p.zawod {
+    color: #01013f;
+    font-family: "Tungsten-Medium";
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-top: 56px;
+}
+
+.zespol .part-left p.imie {
+    color: #01013f;
+    font-family: "Tungsten-Medium";
+    font-size: 4.2rem;
+    font-weight: 500;
+    letter-spacing: 2.07px;
+    line-height: 50px;
+}
+
+.zespol .part-left p.opis {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 31px;
+    max-width: 428px;
+}
+
+.zespol .part-left .longerText {
+    display: none;
+}
+
+.zespol .part-left button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #2dffe3;
+    color: #01013f;
+    font-family: "Tungsten-medium";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.zespol .part-left .przycisk {
+    color: #01013f;
+    font-family: "Tungsten-Medium";
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-top: 21px;
+    margin-bottom: 15px;
+    display: block;
+    margin: 0 0 100px 0;
+}
+
+.zespol .part-left .dominikaButton.przycisk.toForm {
+    padding: 80px 0 0;
+}
+
+.zespol .part-right {
+    /*margin-left: 66px;*/
+    height: 648px;
+}
+
+.zespol .part-right .zdjecie img {
+    max-width: 441px;
+    max-height: 530px;
+}
+
+.zespol .part-right .zdjecie {
+    position: relative;
+}
+
+.zespol .part-right .tlo {
+    position: absolute;
+    width: 501px;
+    height: 484px;
+    background-color: #2dffe3;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.zespol .carousel-control.left,
+.carousel-control.right {
+    background-image: -o-linear-gradient(
+        left,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, rgba(0, 0, 0, 0)),
+        to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+
+.zespol .carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev {
+    color: #01013f;
+}
+
+.opinie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+}
+
+.opinie h1 {
+    color: #01013f;
+    font-family: "Tungsten-medium";
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 3.2px;
+    line-height: 78px;
+    text-align: center;
+}
+
+.opinie .opinionContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    width: 100%;
+    padding: 0 60px;
+    margin: 60px 0;
+    min-height: 600px;
+}
+
+.opinie .opinionContainer div {
+    padding: 10px 20px;
+    margin: 0 20px;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.opinie .opinionContainer .centerOpinion {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.opinie .opinionContainer div .quote {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+.opinie .opinionContainer div .avatarImg {
+    width: 100px;
+    border-radius: 50%;
+    padding: 40px 0;
+}
+
+.opinie .opinionContainer div h2 {
+    color: #01013f;
+    font-family: "Tungsten-medium";
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 1.58px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.opinie .opinionContainer div p {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 31px;
+    text-align: center;
+    padding: 20px;
+}
+
+.opinie button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #2dffe3;
+    color: #01013f;
+    font-family: "Tungsten-medium";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.kontakt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.kontakt .map {
+    border: 5px solid #01013f;
+    border-bottom: none;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.kontakt .contactElements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 60px 80px;
+    background-color: #fff;
+}
+
+.kontakt .contactElements img {
+    border: none;
+    margin: 0 10px;
+}
+
+.kontakt .contactElements div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+}
+
+.kontakt .contactElements .availabilityTime p {
+    width: 100%;
+    text-align: right;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.kontakt .contactElements .contactTitle {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    text-align: left;
+}
+
+.kontakt .contactElements .contactTitle h2 {
+    color: #01013f;
+    font-family: "Tungsten-medium";
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 3.2px;
+}
+
+.kontakt .contactElements .contactTitle div {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+
+.kontakt .contactElements h3 {
+    color: #01013f;
+    font-family: "Tungsten-medium";
+    font-size: 55px;
+    font-weight: 500;
+    letter-spacing: 2.71px;
+    line-height: 66px;
+}
+
+.kontakt .contactElements p {
+    color: #01013f;
+    font-family: "SourceSansPro-Regular";
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 33px;
+}
+
+.kontakt .contactElements .contactTitle img {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.kontakt .contactElements .contactTitle .phoneNumber {
+    border-bottom: 3px solid #2dffe3;
+}
+
+.kontakt .contactElements div form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.kontakt .contactElements div form input {
+    color: #000;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    width: 70%;
+    background-color: #f3f3f3;
+    border-radius: 0;
+    border: none;
+}
+
+.kontakt .contactElements div form button {
+    background-color: #000040;
+    color: #fff;
+    padding: 15px 50px;
+    font-size: 1.8rem;
+    border: 3px solid #000040;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    margin: 20px 0;
+    width: 50%;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(45, 255, 227, 1);
+    box-shadow: 10px 10px 0px 0px rgba(45, 255, 227, 1);
+}
+
+.kontakt .contactElements div .additionalInformations {
+    color: #01013f;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18px;
+    font-family: "SourceSansPro-Regular";
+    padding-top: 25px;
+}
+
+.kontakt .contactElements div .additionalInformations span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.stopka {
+    max-width: 1400px;
+    min-height: 120px;
+    margin: auto;
+    background-color: #01013f;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stopka div {
+    display: flex;
+    align-self: center;
+}
+
+.stopka div a {
+    color: #fff;
+    padding: 10px;
+}
+
+.stopka div p {
+    color: #ffffff;
+    font-family: "SourceSansPro-Regular";
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 31px;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-message {
+    color: red !important;
+    font-family: "Tungsten-Medium";
+    font-size: 2rem;
+}
+/*
+.secondArrow {
+    display: none;
+} */
+
+/* RWD */
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 9px;
+    }
+
+    .allArrows {
+        display: none !important;
+    }
+
+    .header .mobilny-fizjo img {
+        width: 80px;
+    }
+
+    .transitionBetweenSectionBottom.previousFooter {
+        display: none;
+    }
+
+    .mobilne-uslugi {
+        text-align: left !important;
+        padding: 10px 40px;
+    }
+
+    .mobilne-uslugi p.mobilne-uslugi-text {
+        text-align: left;
+    }
+
+    .mobilne-uslugi .mobilne-uslugi-text .kontakt {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .zespol .part-left .przycisk {
+        margin: 0 0 30px 0;
+    }
+
+    .zespol .przycisk {
+        /*padding: 50px 0 0;*/
+    }
+
+    .zespol .part-left {
+        order: 3 !important;
+    }
+
+    .zespol .part-left p.zawod {
+        margin-top: 0;
+        font-size: 2.3rem;
+    }
+
+    .zespol .part-left p.opis {
+        font-size: 3rem;
+    }
+
+    .opinie .opinionContainer {
+        justify-content: flex-start;
+    }
+
+    .kontakt {
+        flex-direction: column;
+    }
+
+    .kontakt img {
+        border: 5px solid #01013f;
+    }
+
+    .kontakt .map {
+        width: 100%;
+    }
+
+    .kontakt .contactElements {
+        background-color: #fff;
+    }
+
+    .kontakt .contactElements .availabilityTime p {
+        text-align: center;
+        padding: 0 0 0 250px;
+        font-size: 2rem;
+    }
+
+    .kontakt .contactElements .contactTitle {
+        text-align: center;
+        justify-content: center;
+        order: -1;
+    }
+
+    .kontakt .contactElements div {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+    }
+
+    .kontakt .contactElements .contactContent {
+        text-align: center;
+    }
+
+    .kontakt .contactElements .contactContent form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .kontakt .contactElements div form input {
+        width: 90%;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+
+    .kontakt .contactElements div form button {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .kontakt .contactElements div .additionalInformations {
+        padding: 50px 0;
+        font-family: "SourceSansPro-Regular";
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 7px;
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .opinie .opinionContainer div {
+        width: 90%;
+        height: auto;
+    }
+
+    .ofertMobileVersion {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+    h1 {
+        line-height: 50px;
+    }
+    .ofertMobileVersion div {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .ofertMobileVersion div .item {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .ofertMobileVersion button {
+        width: 265px;
+        height: 55px;
+        margin: auto;
+        margin-top: 61px;
+        background-color: #01013f;
+        color: #ffffff;
+        font-family: "Tungsten-Medium";
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        line-height: 24px;
+        text-transform: uppercase;
+        -webkit-box-shadow: 8px 8px 0px 0px rgba(45, 255, 227, 1);
+        box-shadow: 8px 8px 0px 0px rgba(45, 255, 227, 1);
+    }
+
+    .carousel-control.left,
+    .carousel-control.right {
+        background-image: none;
+        color: #333;
+        transform: translateY(60px);
+    }
+
+    .uslugi div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .ofertMobileVersion div.item {
+        height: 1040px;
+    }
+
+    .ofertMobileVersion .item.active {
+        /*display: flex;*/
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .uslugi h2 {
+        width: auto !important;
+        text-align: center;
+        margin: 0 auto !important;
+    }
+
+    .uslugi p {
+        text-align: center !important;
+        margin-left: 0 auto !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .ofert {
+        display: none !important;
+    }
+
+    .zespol div {
+        text-align: center;
+    }
+
+    .zespol div.item {
+        height: 1550px;
+    }
+
+    .zespol div .part-left {
+        float: none;
+        margin: 20px 0 0 20px;
+        text-align: left;
+    }
+
+    .zespol div .part-left .opis {
+        max-width: auto !important;
+    }
+
+    .opinie {
+        margin: 0 auto !important;
+        text-align: left;
+    }
+
+    .opinie h1 {
+        text-align: left;
+        margin: 0 10px;
+    }
+
+    .opinie .opinionContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        padding: 0 0 0 0 !important;
+    }
+
+    .opinie .opinionContainer div {
+        width: 80%;
+        margin: 30px 10px;
+    }
+
+    .opinie .opinionContainer div {
+        display: none;
+    }
+
+    .opinie .opinionContainer div {
+        align-self: center;
+    }
+
+    .opinie .opinionContainer .centerOpinion {
+        display: block;
+        margin: auto;
+    }
+
+    .opinie button {
+        display: inline-block;
+    }
+
+    .stopka div {
+        flex-direction: column;
+    }
+
+    .stopka div:last-of-type {
+        flex-direction: row;
+        align-self: flex-start;
+    }
+
+    .stopka div p {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 780px) {
+    html {
+        font-size: 6px;
+    }
+
+    .header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .header .header-img {
+        max-width: 1400px;
+        position: inherit;
+        z-index: 1;
+        width: 100%;
+        -webkit-box-shadow: 10px 10px 0 0 #000040;
+        box-shadow: 10px 10px 0 0 #000040;
+    }
+
+    .header .mobilny-fizjo {
+        position: static;
+        font-size: 8rem;
+        padding: 30px;
+        width: 55%;
+        line-height: 55px;
+        letter-spacing: 1.71px;
+        font-family: "Tungsten-medium";
+    }
+
+    .header .mobilny-fizjo img {
+        display: none;
+    }
+
+    .header .border-img {
+        display: none;
+    }
+
+    .uslugi {
+        margin: 66px 0;
+    }
+
+    .uslugi .serviceElement {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .uslugi p.cennik-gwiazdka {
+        display: none;
+    }
+
+    .ofertMobileVersion div .item {
+        font-size: 2rem;
+    }
+    .ofertMobileVersion div .item p {
+        font-size: 3rem;
+        color: #01013f;
+    }
+
+    .mobilne-uslugi {
+        max-width: 1400px;
+        margin: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding-top: 78px;
+        text-align: center;
+        padding: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    h1 {
+        color: #01013f;
+        font-family: "Tungsten-Medium";
+        font-size: 6.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 3.2px;
+        line-height: 50px;
+    }
+    .mobilne-uslugi p.mobilne-uslugi-text {
+        font-size: 2.7rem;
+    }
+
+    .ofertMobileVersion .carouselOfertImg {
+        max-width: 200px;
+    }
+
+    .kontakt .contactElements {
+        padding: 40px 30px;
+    }
+
+    .kontakt .contactElements .availabilityTime p {
+        text-align: center;
+        padding: 0;
+        font-size: 2.4rem;
+    }
+
+    .kontakt .contactElements .contactTitle {
+        width: 95%;
+        flex-direction: column !important;
+    }
+
+    .kontakt .contactElements .contactTitle h2 {
+        font-size: 40px;
+    }
+
+    .kontakt .contactElements .contactTitle div {
+        align-self: center;
+    }
+
+    .kontakt .contactContent h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 630px) {
+    #myCarousel1 .carousel-inner .item .part-right h1 {
+        font-size: 7.5rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav .logo img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 410px) {
+    .nav .logo {
+        width: 70%;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .nav .logo img {
+        width: 150px;
+    }
+    .zespol .part-left .przycisk {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 1436px) {
+    .nav .logo {
+        width: 70%;
+        text-align: left;
+        padding-left: 10px;
+    }
+}
