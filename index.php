@@ -422,7 +422,7 @@
                 </p>
                 <?php
                     if (isset($_POST['btnSubmit'])) {
-                        $admin_email = "spam@kfeliszewski.pl";
+                        $admin_email = "spam@spam.spam";
                         $email = $_POST['email'];
                         $subject = "Wiadomość ze strony AKF";
                         $name = $_POST['imie'];
